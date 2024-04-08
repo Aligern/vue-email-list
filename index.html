@@ -17,7 +17,14 @@
 <body>
 
     <div id="app">
-
+        <!-- we need to create a random list of 10 addresses -->
+        <ul v-for="(item, index) in emails">
+            <li>{{item}}</li>
+        </ul>
+        <!-- this button will generate the list -->
+        <button @click="getRandomEmails">
+            Genera email
+        </button>
 
     </div>
 
