@@ -19,11 +19,7 @@ createApp({
                     const email = res.data.response
                     this.emails.push(email);
                 })
-                Promise.push(promise);
             }
-            promise.all(promises).then(() => {
-                console.log(this.emails);
-            });
         }
     },
     created() {
