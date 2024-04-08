@@ -1,0 +1,11 @@
+/* reset */
+ul {
+    list-style: none;
+    list-style-type: none;
+    padding: 5px;
+}
+/* general */
+#app {
+    height: 100vh;
+    background-color: antiquewhite;
+}
