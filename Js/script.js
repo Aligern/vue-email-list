@@ -12,14 +12,20 @@ createApp({
         // here we  have our function that will generate the emails //
         getRandomEmails() {
             this.emails = [];
+            const emailList =[];
             for (let i = 0; i < this.numEmails; i++) {
-                // we make the API do the work //
+                // we call out the API with axios //
                 axios.get(this.api_path).then((res)=>{
-                   // console.log(res.data);
+
+                    console.log(res.data);
                     const email = res.data.response
                     this.emails.push(email);
-                }) ;
-              // console.log(this.emails);
+                    if(i === this.emails.length -1){
+                        this.email = [...emailList];
+                    }
+                    
+                });
+             // console.log(this.emails);
             }
         }
     },
@@ -28,7 +34,6 @@ createApp({
         this.getRandomEmails();
     },
     mounted() {
-        
         
     }
 }).mount('#app');

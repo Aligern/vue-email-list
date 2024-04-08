@@ -16,15 +16,20 @@
 
 <body>
 
-    <div id="app">
+    <div id="app" class="d-flex justify-content-center text-center">
         <!-- we need to create a random list of 10 addresses -->
-        <div class="">
-            <ul class="list" v-for="(item, index) in emails">
-                <li>
-                    {{item}}
-                </li>
-            </ul>
-            <button class="btn btn-outline-dark " @click="getRandomEmails">
+        <div class="bg-white p-2">
+
+            <h1>Lista email</h1>
+            <div>
+                <ul v-if="emails.length < 10">
+                    <li v-for="(item, index) in emails">
+                        {{item}}
+                    </li>
+                </ul>
+            </div>
+            
+            <button class="btn btn-outline-dark" @click="getRandomEmails">
                 genera lista
             </button>
         </div>
