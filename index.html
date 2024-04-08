@@ -21,8 +21,8 @@
         <div class="bg-white p-2">
 
             <h1>Lista email</h1>
-            <div>
-                <ul v-if="emails.length < 10">
+            <div v-if="emails.length >= 10">
+                <ul>
                     <li v-for="(item, index) in emails">
                         {{item}}
                     </li>
