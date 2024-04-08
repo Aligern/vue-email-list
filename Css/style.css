@@ -9,3 +9,6 @@ ul {
     height: 100vh;
     background-color: antiquewhite;
 }
+[v-cloak] {
+    
+}
