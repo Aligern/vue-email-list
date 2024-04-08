@@ -13,7 +13,13 @@ createApp({
         // here we  have our function that will generate the emails
         getRandomEmails() {
             for (let i = 0; i < this.numEmails; i++) {
-                
+                // we make the API do the work
+                axios.get(this.api_path).then((res)=>{
+                    console.log(res.data);
+                    const email = res.data.response
+                    this.emails.push(email);
+
+                })
             }
         }
     },
