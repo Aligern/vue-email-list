@@ -18,7 +18,6 @@ createApp({
                     console.log(res.data);
                     const email = res.data.response
                     this.emails.push(email);
-
                 })
             }
         }
@@ -26,7 +25,7 @@ createApp({
     created() {
 
     },
-    mouted() {
-
+    mounted() {
+        this.getRandomEmails();
     }
 }).mount('#app');
