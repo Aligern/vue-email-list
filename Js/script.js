@@ -24,10 +24,11 @@ createApp({
         }
     },
     created() {
+        // we print directly the list into the DOM //
         this.getRandomEmails();
     },
     mounted() {
-        // we print directly the list into the DOM //
+        
         
     }
 }).mount('#app');
