@@ -26,6 +26,7 @@ createApp({
 
     },
     mounted() {
+        // we print directly the list into the DOM
         this.getRandomEmails();
     }
 }).mount('#app');
